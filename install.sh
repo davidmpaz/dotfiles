@@ -30,3 +30,10 @@ sudo ln -fs /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 sudo dpkg-reconfigure --frontend noninteractive tzdata
 
 zshrc
+
+# needs to be after zshrc
+echo "" >> ~/.zshrc
+echo "# remove ls and directory completion highlight color" >> ~/.zshrc
+echo "_ls_colors=':ow=01;33'" >> ~/.zshrc
+echo 'zstyle ":completion:*:default" list-colors "${(s.:.)_ls_colors}"' >> ~/.zshrc
+echo 'LS_COLORS+=$_ls_colors' >> ~/.zshrc
