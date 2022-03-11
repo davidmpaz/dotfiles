@@ -40,4 +40,4 @@ echo 'LS_COLORS+=$_ls_colors' >> ~/.zshrc
 
 # git configuration for default pull strategy and always sign commits
 git config --global pull.rebase false
-git config --global commit.gpgsign = true
+git config --global commit.gpgsign true
